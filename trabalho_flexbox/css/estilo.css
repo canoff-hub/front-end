@@ -1,0 +1,209 @@
+:root {
+    --cor-fundo: #7c475d;
+    --cor-texto: #fff;
+    --cor-header: #111;
+    --cor-nav: #333;
+    --cor-link: #fff;
+    --cor-footer: #111;
+    --cor-produto-bg: #fff;
+  
+    --espacamento: 3rem;
+    --borda-radius: 8px;
+    --sombra: 0.3rem 0.3rem 6px rgba(0,0,0,0.3);
+  
+    --fonte-principal: 'Roboto', sans-serif;
+    --fonte-destaque: 'Orbitron', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  body {
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  header {
+    background-color: var(--cor-header);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--fonte-destaque);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  nav {
+    background-color: var(--cor-nav);
+    position: fixed;
+    top: 5rem;
+    width: 100%;
+    z-index: 9;
+    
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+    padding: 1rem;
+  
+    width: 100%;        /* ← Isso garante que o UL ocupe toda a largura */
+    margin: 0 auto;     /* ← Centraliza se tiver largura definida (extra segurança) */
+    max-width: 1200px;  /* ← Se quiser limitar pra não ficar esticado demais em telas grandes */
+  }
+  
+  
+  nav a {
+    color: var(--cor-link);
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex: 1; /* ← essa linha faz o main crescer e empurrar o footer pra baixo */
+    margin-top: 2rem;
+  }
+  
+  
+  
+  section {
+    min-height: 100vh;
+    padding: var(--espacamento);
+  }
+  
+  section h2 {
+    margin-bottom: var(--espacamento);
+    font-size: 2rem;
+    color:rgb(255, 255, 255)
+  }
+
+  .destaques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  
+  .destaque-flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: var(--cor-produto-bg);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra);
+    padding: 1rem;
+    margin: 0 auto;
+    min-width: 250px;
+    max-width: 200px;
+    width: 100%;
+    flex-wrap: wrap; /* opcional p/ responsividade */
+  }
+  
+  .destaque-flex img {
+    max-width: 300px;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: var(--borda-radius);
+  }
+
+  .destaque-flex .info-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 1rem;
+    background: none; /* tira o fundo branco duplicado */
+    box-shadow: none; /* remove sombra duplicada */
+  }  
+  
+  .nome {
+    color: #222;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* responsivo */
+    font-weight: bold;
+  }
+
+  .preco {
+    color: #008000;
+    font-size: clamp(1.2rem, 2vw, 1.3rem); /* responsivo também */
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+
+  
+  .produto img {
+    max-width: 80%;
+    border-radius: var(--borda-radius);
+  }
+  
+  footer {
+    background-color: var(--cor-footer);
+    color: white;
+    font-size: 80%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .colecao {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .produto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0.5rem 0.5rem 12px rgba(0, 0, 0, 0.4);
+    z-index: 5;
+  }
+
+  .faq {
+    margin-bottom: 2rem;
+  }
+  
+  .faq .pergunta {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .faq .resposta {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }  
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
