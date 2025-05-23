@@ -94,6 +94,7 @@
   
   section {
     min-height: 40vh;
+    scroll-margin-top: 40px;
     padding: var(--espacamento);
   }
   
