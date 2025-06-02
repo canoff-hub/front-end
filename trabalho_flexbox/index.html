@@ -124,6 +124,31 @@
 
   </main>
 
+  <section id="formulario" style="padding: var(--espacamento)">
+    <h2>★ Torne-se um cliente!</h2>
+    <h4>Preencha os dados abaixo e receba novidades da RetroShirts :)</h4>
+  
+    <form class="formulario-retro" action="#" method="post">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="nome" name="nome" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="tel" class="form-control" id="telefone" name="telefone" pattern="[0-9]{11}" placeholder=" Opcional">
+      </div>
+  
+      <button type="submit" class="btn btn-dark">Enviar</button>
+    </form>
+  </section>
+  
+
   <footer id="footer">
     <p>&copy; 2025 RetroShirts </p>
     <p>DOT Serviços de Varejo do Brasil Ltda.</p>
